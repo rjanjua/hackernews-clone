@@ -6,6 +6,7 @@ export class AppPage {
   }
 
   getParagraphText() {
-    return element(by.css('app-root h1')).getText();
+    browser.waitForAngular();
+    return element.all(by.css('li')).first().getText();
   }
 }
